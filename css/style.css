@@ -19,7 +19,7 @@ body{
   font-weight: 400;
   color: #777;
   line-height: 1.7;
-  padding: 30px;
+  padding: 10px 30px;
 }
 
 .header{
@@ -40,7 +40,14 @@ body{
   position: absolute;
   top: 40px;
   left: 40px;
+  animation-name: moveleft;
+  animation-duration: 1s;
 
+}
+
+.logo:hover{
+  animation-name: fadein;
+  animation-duration: 1s;
 }
 
 .logo{
@@ -124,6 +131,16 @@ body{
 
 }
 
+@keyframes fadein {
+  0%{
+    opacity: 0
+  }
+
+  100%{
+    opacity: 1
+  }
+
+}
 
 
 .btn:link,
@@ -132,15 +149,19 @@ body{
   text-transform: uppercase;
   padding: 15px 40px;
   display: inline-block;
-  
+  border-radius: 100px;
+  transition: all .2s;
+
 }
 
 .btn:hover{
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.3)
 }
 
 .btn:active{
   transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.3)
 }
 
 .btn-white{
